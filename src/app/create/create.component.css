@@ -1,0 +1,14 @@
+.errors{
+	color: red;
+	display: inline-block;
+	vertical-align: top;
+	margin-top: 5%;
+}
+.create{
+	display: inline-block;
+	padding-left: 5%;
+}
+#forms{
+	text-align: right;
+	margin-right: 20px;
+}

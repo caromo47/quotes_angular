@@ -1,0 +1,26 @@
+<div class="create">
+	<h2>Add a Quote</h2>
+	<form (submit)="onSubmit(formData)" #formData="ngForm">
+		<table id="forms">
+			<tr>
+				<td><textarea name="words" rows="8" cols="80" required minlength="5" maxlength="250" [(ngModel)]="newQuote.words" #words="ngModel">
+						</textarea>
+				</td>
+			</tr>
+			<tr>
+				<td>Author:
+					<input type="text" name="author" value="Author" required minlength="2" maxlength="25" [(ngModel)]="newQuote.author" #author="ngModel">
+				</td>
+			</tr>
+			<tr>
+				<td>
+					<button type="submit" [disabled]="!formData.valid">Add Quote</button>
+				</td>
+			</tr>
+		</table>
+	</form>
+</div>
+<div class="errors">
+	<p *ngIf="!author.valid">You need to credit the author</p>
+	<p *ngIf="!words.valid">Add that quote!</p>
+</div>
